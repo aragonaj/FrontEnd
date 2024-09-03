@@ -17,6 +17,10 @@ html {
     text-decoration: none;
 }
 
+.input {
+    outline: none;
+}
+
 /****** fuentes ******/
 @import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* 
@@ -180,10 +184,10 @@ html {
     position: absolute;
     top: -100px;
 }
-
 /**** header.fin ****/
 
 /****** main ******/
+/* contenedor vídeo */
 .contenedor-video {
     position: absolute;
     /* top: 5rem; */
@@ -209,6 +213,215 @@ html {
     background-color: var(--color-negro);
     opacity: 50%;
 }
+/* fin.contenedor vídeo */
+/* contenedor secciones */
+.contenedor-secciones {
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    max-width: 100%;
+}
+/* fin.contendor secciones */
+/* configuración de los sliders */
+.slider {
+    width: 100%;
+    height: var(--height);
+    margin: 0.25rem 0;
+    overflow: hidden;
+    mask-image: linear-gradient( to right, transparent, #212529 10% 90%, transparent );
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+.slider .lista-imagenes {
+    display: flex;
+    width: 100%;
+    min-width: calc( var(--width) * var(--quantity) );
+    position: relative;
+}
+
+.slider .lista-imagenes-artistas {
+    height: 100%;
+}
+
+.slider .lista-imagenes-labels .list-item {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: desplazamientoIzquierda 20s linear infinite;
+    /*animation-delay: calc( (10s / var(--quantity)) * (var(--posicion) -1) ) !important;*/
+}
+
+.slider .lista-imagenes-artistas .list-item {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    right: 100%;
+    animation: desplazamientoDerecha 45s linear infinite;
+}
+
+.slider .lista-imagenes .list-item img {
+    width: 100%;
+    position: relative;
+}
+
+.slider .lista-imagenes-labels img {
+    position: relative;
+    height: 75px;
+}
+
+.slider .lista-imagenes-artistas .twitter-artista {
+    position: absolute;
+    color: var(--color-rojo);
+    font-size: 1.6rem;
+    bottom: 5%;
+    left: 20%;
+}
+
+.slider .lista-imagenes-artistas .facebook-artista {
+    position: absolute;
+    color: var(--color-rojo);
+    font-size: 1.6rem;
+    bottom: 5%;
+    left: 40%;
+}
+
+.slider .lista-imagenes-artistas .youtube-artista {
+    position: absolute;
+    color: var(--color-rojo);
+    font-size: 1.6rem;
+    bottom: 5%;
+    left: 60%;
+}
+
+.slider .lista-imagenes-artistas .instagram-artista {
+    position: absolute;
+    color: var(--color-rojo);
+    font-size: 1.6rem;
+    bottom: 5%;
+    left: 80%;
+}
+
+@keyframes desplazamientoIzquierda {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: calc( var(--width) * -1);
+    }
+}
+
+@keyframes desplazamientoDerecha {
+    from {
+        right: 100%;
+    }
+
+    to {
+        right: calc( var(--width) * -1);
+    }
+}
+
+.slider:hover .list-item {
+    animation-play-state: paused !important;
+}
+
+.slider:hover .list-item-artista {
+    filter: grayscale(1);
+}
+
+.slider .list-item-artista:hover {
+    filter: grayscale(0);
+}
+/* fin.configuración de los sliders */
+/* sección artistas */
+.seccion-artistas {
+    padding: 0;
+    margin: 0;
+}
+/* fin.sección artistas */
+/* identificadores de los sliders */
+#labelLogo1 {
+    animation-delay: 0s;
+}
+
+#labelLogo2 {
+    animation-delay: 2s;
+}
+
+#labelLogo3 {
+    animation-delay: 4s;
+}
+
+#labelLogo4 {
+    animation-delay: 6s;
+}
+
+#labelLogo5 {
+    animation-delay: 8s;
+}
+
+#labelLogo6 {
+    animation-delay: 10s;
+}
+
+#labelLogo7 {
+    animation-delay: 12s;
+}
+
+#labelLogo8 {
+    animation-delay: 14s;
+}
+
+#labelLogo9 {
+    animation-delay: 16s;
+}
+
+#labelLogo10 {
+    animation-delay: 18s;
+}
+
+#imagenArtista1 {
+    animation-delay: 0s;
+}
+
+#imagenArtista2 {
+    animation-delay: 5s;
+}
+
+#imagenArtista3 {
+    animation-delay: 10s;
+}
+
+#imagenArtista4 {
+    animation-delay: 15s;
+}
+
+#imagenArtista5 {
+    animation-delay: 20s;
+}
+
+#imagenArtista6 {
+    animation-delay: 25s;
+}
+
+#imagenArtista7 {
+    animation-delay: 30s;
+}
+
+#imagenArtista8 {
+    animation-delay: 35s;
+}
+
+#imagenArtista9 {
+    animation-delay: 40s;
+}
+
+#imagenArtista10 {
+    animation-delay: 50s;
+}
+/* identificadores de los sliders.end */
 /**** main.fin ****/
 /****** footer ******/
 .footer {
@@ -226,7 +439,7 @@ html {
 
 .fa-brands {
     /* font-size: 18px; */
-    color: #f1f3f4;
+    color: var(--color-blanco);
 }
 /**** footer.fin ****/
 
