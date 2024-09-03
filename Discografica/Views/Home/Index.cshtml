@@ -1,8 +1,21 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- vídeo -->
+<div class="contenedor contenedor-video">
+    <video autoplay loop muted class="video" id="video">
+        <source src="~/assets/videos/video.mp4" type="video/mp4">
+    </video>
+    <div class="efecto-oscurecer"></div>
 </div>
+<!-- secciones -->
+<!-- sección artistas -->
+<section class="seccion seccion-artistas" id="artistas"></section>
+<!-- sección top albumes -->
+<section class="seccion seccion-topAlbums" id="topAlbums"></section>
+<!-- sección top artistas -->
+<section class="seccion seccion-topArtistas" id="topArtistas"></section>
+<!-- sección contacto -->
+<section class="seccion seccion-contacto" id="contacto"></section>
+<!-- fin de las secciones -->

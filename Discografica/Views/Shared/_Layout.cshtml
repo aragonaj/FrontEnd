@@ -1,49 +1,80 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Discografica</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!-- título página web -->
+    <title>@ViewData["Title"] - Kerplunk Records</title>
+
+    <!-- icono página web -->
+    <link rel="icon" type="image/x-icon" href="~/assets/imagenes/logo.png">
+
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="~/css/Home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/HomeMediaQuery.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Discografica.styles.css" asp-append-version="true" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Discografica</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+<body class="body">
+    <header class="header">
+        <nav class="nav">
+            <input type="checkbox" id="nav-toggle">
+            <!-- logo -->
+            <div class="contenedor contenedor-logo">
+                <img class="logo" src="~/assets/imagenes/logo.png" href="#home" id="logo">
+                <span class="titulo titulo-sitioWeb"><a class="titulo__link">Kerplunk Records</a></span>
             </div>
+            <!-- menú -->
+            <ul class="menu">
+                <li class="menu__item"><a href="#seccionArtistas" class="menu__link" id="artistas">Artistas</a></li>
+                <li class="menu__item"><a href="#seccionTopAlbums" class="menu__link" id="topAlbums">Top Álbumes</a></li>
+                <li class="menu__item"><a href="#seccionTopArtistas" class="menu__link" id="topArtistas">Top Artistas</a></li>
+                <li class="menu__item"><a href="#seccionContacto" class="menu__link" id="contacto">Contacto</a></li>
+
+                <div class="contenedor contenedor-registro-md">
+                    <button type="button" class="boton boton-login" id="login">Login</button>
+                    <button type="button" class="boton boton-signup" id="signup">Registrarse</button>
+                </div>
+            </ul>
+            <!-- registro usuario -->
+            <div class="contenedor contenedor-registro">
+                <button type="button" class="boton boton-login" id="login">Login</button>
+                <button type="button" class="boton boton-signup" id="signup">Registrarse</button>
+            </div>
+            <!-- icono de menú hamburguesa -->
+            <label for="nav-toggle" class="hamIcon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </label>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Discografica - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <main class="main">
+        @RenderBody()
+    </main>
+    @* <footer class="footer">
+        <div class="contenido">
+            <ul class="menu menu-redes-sociales">
+                <li class="menu__item"><a class="menu__link fa-brands fa-instagram"></a></li>
+                <li class="menu__item"><a class="menu__link fa-brands fa-linkedin"></a></li>
+                <li class="menu__item"><a class="menu__link fa-brands fa-twitter"></a></li>
+                <li class="menu__item"><a class="menu__link fa-brands fa-youtube"></a></li>
+            </ul>
         </div>
-    </footer>
+    </footer> *@
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+    <script src="~/js/Home.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -1,0 +1,94 @@
+﻿/* ============ desktop view ============ */
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+    .contenedor-registro-md {
+        display: none;
+    }
+}
+/* ============ desktop view.fin ============ */
+/* ============ small devices ============ */
+/* For Tablet View */
+@media screen and (min-device-width: 640px) and (max-device-width: 1024px) {
+    .contenedor-registro-md {
+        display: none;
+    }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 1300px) {
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contenedor-logo {
+        margin: 0 0.5rem;
+    }
+
+    .logo {
+        width: 2.5rem;
+        height: auto;
+    }
+
+    .titulo-sitioWeb {
+        display: none;
+    }
+
+    .nav .menu {
+        float: none;
+        position: fixed;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+        z-index: 2;
+        top: 5rem;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        background-color: var(--color-verde);
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+    }
+
+    .contenedor-registro {
+        display: none;
+    }
+
+    .nav :checked ~ .menu {
+        bottom: 0;
+    }
+
+    .nav .hamIcon {
+        display: block;
+    }
+
+    .nav :checked ~ .hamIcon .bar:nth-child(1) {
+        transform: translateY(10px) rotate(225deg);
+    }
+
+    .nav :checked ~ .hamIcon .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-225deg);
+    }
+
+    .nav :checked ~ .hamIcon .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .contenedor-video {
+        display: none;
+    }
+}
+/* ============ small devices.fin ============ */
+

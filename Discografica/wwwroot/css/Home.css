@@ -1,0 +1,232 @@
+﻿/****** reseteo ******/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.menu__item {
+    list-style-type: none;
+}
+
+.menu__link {
+    text-decoration: none;
+}
+
+/****** fuentes ******/
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* 
+    font-family: "Josefin Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
+*/
+/**** fuentes.end ****/
+
+/****** colores ******/
+:root {
+    /* colores */
+    --color-blanco: #f1f3f4;
+    --color-negro: #130c0e;
+    --color-verde: #1d953e;
+    --color-rojo: #da103b;
+}
+/**** colores.fin ****/
+
+/****** header ******/
+.contenedor-logo {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor-logo > * {
+    margin: 0 1rem;
+}
+
+.logo {
+    position: relative;
+    display: block;
+    width: 15%;
+    height: 15%;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo__link {
+    position: relative;
+    color: var(--color-blanco);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: larger;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 5rem;
+    background-color: transparent;
+    z-index: 1;
+    /* background-color: var(--color-negro); */
+}
+
+.nav .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.nav .menu .menu__item {
+    display: grid;
+    align-items: center;
+    width: 7rem;
+    height: 3rem;
+    margin: auto 1rem;
+    list-style: none;
+}
+
+.nav .menu .menu__link {
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: medium;
+    font-weight: 700;
+    color: var(--color-blanco);
+}
+
+.nav .hamIcon {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav .hamIcon .bar {
+    width: 30px;
+    height: 5px;
+    background-color: var(--color-blanco);
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+.contenedor-registro {
+    position: relative;
+    width: 20%;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-registro > .boton {
+    margin: 0 .5rem;
+}
+
+.boton-login,
+.boton-signup {
+    width: 5.5rem;
+    height: 1.75rem;
+    text-align: center;
+    border-radius: .35rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.boton-login {
+    border: #f1f3f4 2px solid;
+    background-color: transparent;
+    color: var(--color-blanco);
+}
+
+.boton-signup {
+    border: transparent;
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+}
+
+#nav-toggle {
+    position: absolute;
+    top: -100px;
+}
+
+/**** header.fin ****/
+
+/****** main ******/
+.contenedor-video {
+    position: absolute;
+    /* top: 5rem; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.efecto-oscurecer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-negro);
+    opacity: 50%;
+}
+/**** main.fin ****/
+/****** footer ******/
+.footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-negro);
+}
+
+.fa-brands {
+    /* font-size: 18px; */
+    color: #f1f3f4;
+}
+/**** footer.fin ****/
+
