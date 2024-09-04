@@ -9,6 +9,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.seccion {
+    margin: 0.85rem 0;
+}
+
 .menu__item {
     list-style-type: none;
 }
@@ -341,6 +345,94 @@ html {
     margin: 0;
 }
 /* fin.sección artistas */
+/* sección álbumes */
+.seccion-albumes {
+    background-color: var(--color-2-header);
+    color: var(--color-4-header);
+    /*background: linear-gradient(to right, #FF0000 20%, #FFF000 80%);*/
+}
+
+.seccion .seccion-titulo {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.galeria-artistas {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.seccion-artistas .contenedor:nth-child(1) {
+    background-color: #e6d900;
+}
+
+.oh-snap {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 0.7rem;
+}
+
+.oh-snap > * {
+    scroll-snap-align: start;
+}
+
+.seccion-contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 3.5rem;
+}
+
+.seccion-contenedor i {
+    font-size: 1.5rem;
+}
+
+.carrusel-slide {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+.card {
+    width: 27rem;
+    height: auto;
+    border-radius: 0.35rem;
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+}
+
+.contenedor-datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 1rem 0;
+    font-weight: 700;
+    color: var(--color-2-header);
+}
+
+.contenedor-datos h5 {
+    font-weight: 800;
+}
+
+.card > img {
+    display: block;
+    border-radius: 0.35rem;
+    object-fit: cover;
+}
+/* fin.sección álbumes */
 /* identificadores de los sliders */
 #labelLogo1 {
     animation-delay: 0s;
