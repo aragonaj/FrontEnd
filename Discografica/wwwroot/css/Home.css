@@ -98,7 +98,12 @@ html {
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 800;
+    transition: color 0.5s ease;
 }
+
+.nav.scrolled .titulo__link {
+    color: var(--color-blanco);
+} 
 
 .nav {
     position: fixed;
@@ -113,7 +118,13 @@ html {
     height: 5rem;
     background-color: transparent;
     z-index: 1;
-    /* background-color: var(--color-negro); */
+    /*background-color: transparent;*/
+    transition: background-color 0.5s ease;
+}
+
+.nav.scrolled {
+    background-color: var(--color-rojo);
+    opacity: 0.9;
 }
 
 .nav .menu {
