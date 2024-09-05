@@ -35,10 +35,10 @@
             </div>
             <!-- menú -->
             <ul class="menu">
-                <li class="menu__item"><a href="#artistas" class="menu__link" id="artistas">Artistas</a></li>
-                <li class="menu__item"><a href="#topAlbums" class="menu__link" id="topAlbums">Top Álbumes</a></li>
-                <li class="menu__item"><a href="#topArtistas" class="menu__link" id="topArtistas">Top Artistas</a></li>
-                <li class="menu__item"><a href="#labels" class="menu__link" id="contacto">Sponsors</a></li>
+                <li class="menu__item"><a href="#seccionArtistas" class="menu__link" id="artistas">Artistas</a></li>
+                <li class="menu__item"><a href="#seccionTopAlbums" class="menu__link" id="topAlbums">Top Álbumes</a></li>
+                <li class="menu__item"><a href="#seccionTopArtistas" class="menu__link" id="topArtistas">Top Artistas</a></li>
+                <li class="menu__item"><a href="#seccionLabels" class="menu__link" id="labels">Sponsors</a></li>
 
                 <div class="contenedor contenedor-registro-md">
                     <button type="button" class="boton boton-login" id="login">Login</button>
@@ -57,20 +57,19 @@
                 <div class="bar"></div>
             </label>
         </nav>
+        <!-- vídeo -->
+        <div class="contenedor contenedor-video">
+            <video autoplay loop muted class="video" id="video">
+                <source src="~/assets/videos/video.mp4" type="video/mp4">
+            </video>
+            <div class="efecto-oscurecer"></div>
+        </div>
     </header>
     <main class="main">
         @RenderBody()
     </main>
-    @* <footer class="footer">
-        <div class="contenido">
-            <ul class="menu menu-redes-sociales">
-                <li class="menu__item"><a class="menu__link fa-brands fa-instagram"></a></li>
-                <li class="menu__item"><a class="menu__link fa-brands fa-linkedin"></a></li>
-                <li class="menu__item"><a class="menu__link fa-brands fa-twitter"></a></li>
-                <li class="menu__item"><a class="menu__link fa-brands fa-youtube"></a></li>
-            </ul>
-        </div>
-    </footer> *@
+    <footer class="footer">
+    </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@

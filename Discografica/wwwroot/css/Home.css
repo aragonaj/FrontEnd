@@ -10,7 +10,7 @@ html {
 }
 
 .seccion {
-    margin: 0.85rem 0;
+    margin: 1rem 0;
 }
 
 .menu__item {
@@ -210,13 +210,9 @@ html {
     position: absolute;
     top: -100px;
 }
-/**** header.fin ****/
-
-/****** main ******/
 /* contenedor vídeo */
 .contenedor-video {
     position: absolute;
-    /* top: 5rem; */
     top: 0;
     left: 0;
     width: 100%;
@@ -240,6 +236,8 @@ html {
     opacity: 50%;
 }
 /* fin.contenedor vídeo */
+/*  header.fin */
+/* main */
 /* contenedor secciones */
 .contenedor-secciones {
     position: absolute;
@@ -369,8 +367,8 @@ html {
 /* fin.sección artistas */
 /* sección álbumes */
 .seccion-albumes {
-    background-color: var(--color-2-header);
-    color: var(--color-4-header);
+    background-color: var();
+    color: var();
     /*background: linear-gradient(to right, #FF0000 20%, #FFF000 80%);*/
 }
 
@@ -451,10 +449,225 @@ html {
 
 .card > img {
     display: block;
+    width: 96.5%;
+    height: auto;
     border-radius: 0.35rem;
+    margin: 0.5rem auto;
     object-fit: cover;
 }
 /* fin.sección álbumes */
+/* sección contacto */
+.seccion-contacto {
+    height: auto;
+    width: 95%;
+    margin: 0.75rem auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0.35rem;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.seccion-contacto .titulo-formulario {
+    /*text-align: center;*/
+    font-family: "Madimi One", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.contenedor-formulario {
+    position: relative;
+    width: 70%;
+    height: auto;
+    align-content: center;
+    padding: 0rem 3rem;
+}
+
+.formulario-contacto {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 1em 2em;
+}
+
+.contenedor-menu {
+    position: relative;
+    width: 30%;
+    height: auto;
+    align-content: center;
+}
+
+.fieldset {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem auto;
+}
+
+.contenedor-email-pais {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contenedor-email-pais .contenedor-email {
+    position: relative;
+    height: 1.5rem;
+    width: 50%;
+}
+
+.contenedor-email-pais
+.contenedor-email
+input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    border-bottom: 2px solid var(--color-1-header);
+}
+
+.contenedor-email input:focus ~ label,
+.contenedor-email input:valid ~ label {
+    transform: translateY(-1rem);
+}
+
+.contenedor-email-pais
+.contenedor-email
+label {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    color: var(--color-3-header);
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.contenedor-email-pais
+.contenedor-email
+.linea-validacion {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-1-header);
+}
+
+.contenedor-email
+.linea-validacion:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: var(--color-6-header);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.contenedor-email input:focus ~ .linea-validacion:before,
+.contenedor-email input:valid ~ .linea-validacion:before {
+    transform: scaleX(1);
+}
+
+.contenedor-email-pais .contenedor-pais {
+    position: relative;
+    width: 50%;
+}
+
+.contenedor-pais > *:nth-child(1) {
+    margin-left: 1.5rem;
+}
+
+.contenedor-icono {
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: end;
+    align-items: baseline;
+    color: var(--color-5-header);
+}
+
+.contenedor-icono i {
+    font-size: 18px;
+}
+
+.select-pais {
+    border: none;
+    border-radius: 0.35rem;
+    appearance: none;
+    padding: 2px 30px 2px 15px;
+    width: 100%;
+    color: var(--color-5-header);
+    background-color: var(--color-1-header);
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.fieldset > * {
+    margin: 1rem auto;
+}
+
+.contenedor-tienda {
+    height: auto;
+    padding: 1em;
+}
+
+.contenedor-tienda ul {
+    list-style: none;
+}
+
+.contenedor-tienda ul li {
+    margin: 1.5rem 0;
+}
+
+.contenedor-tienda ul li a {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--color-2-header);
+}
+
+.contenedor-tienda ul li a:hover {
+    font-style: italic;
+    font-weight: 700;
+    color: var(--color-1-header);
+}
+
+.contenedor-informacion {
+    text-align: center;
+}
+
+.contenedor-informacion a {
+    margin: 0 1rem;
+    font-size: 20px;
+}
+
+.contenedor-terminos {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: 12px;
+}
+
+.boton-tienda {
+    margin: 1rem;
+}
+
+.linea {
+    width: 100%;
+}
+/* fin.sección contacto */
 /* identificadores de los sliders */
 #labelLogo1 {
     animation-delay: 0s;
@@ -539,21 +752,7 @@ html {
 /**** main.fin ****/
 /****** footer ******/
 .footer {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 2rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    background-color: var(--color-negro);
-}
 
-.fa-brands {
-    /* font-size: 18px; */
-    color: var(--color-blanco);
 }
 /**** footer.fin ****/
 
