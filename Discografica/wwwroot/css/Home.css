@@ -1,4 +1,24 @@
-﻿/****** reseteo ******/
+﻿/****** fuentes ******/
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* 
+    font-family: "Josefin Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
+*/
+/**** fuentes.end ****/
+
+/****** colores ******/
+:root {
+    /* colores */
+    --color-blanco: #f1f3f4;
+    --color-azulOscuro: #000814;
+    --color-azul: #003566;
+    --color-azulClaro: #001D3D;
+    --color-amarillo: #FFC300;
+    --color-amarilloClaro: #FFD60A;
+}
+/**** colores.fin ****/
+
+/****** reseteo ******/
 * {
     margin: 0;
     padding: 0;
@@ -26,46 +46,26 @@ html {
 }
 
 .boton {
-    width: 7.25rem;
-    height: 2.75rem;
+    width: 6rem;
+    height: 2rem;
     padding: 0;
     margin: 0;
     border: none;
     border-radius: 0.35rem;
-    font-family: "Poppins", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-style: normal;
-    font-weight: 700;
-    background-color: var();
-    color: var();
+    font-weight: 600;
+    background-color: var(--color-azulClaro);
+    color: var(--color-amarilloClaro);
     transition: color 0.5s linear, background-color 0.3s linear;
     cursor: pointer;
 }
 
 .boton:hover {
-    border: 2px solid var();
-    color: var(--color-2-header);
-    background-color: var();
+    border: 2px solid var(--color-azulClaro);
+    color: var(--color-azulClaro);
+    background-color: transparent;
 }
-
-/****** fuentes ******/
-@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-/* 
-    font-family: "Josefin Sans", sans-serif;
-    font-family: "Open Sans", sans-serif;
-*/
-/**** fuentes.end ****/
-
-/****** colores ******/
-:root {
-    /* colores */
-    --color-blanco: #f1f3f4;
-    --color-azulOscuro: #000814;
-    --color-azul: #003566;
-    --color-azulClaro: #001D3D;
-    --color-amarillo: #FFC300;
-    --color-amarilloClaro: #FFD60A;
-}
-/**** colores.fin ****/
 
 /****** header ******/
 .contenedor-logo {
@@ -263,7 +263,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--color-negro);
+    background-color: var(--color-azulOscuro);
     opacity: 50%;
 }
 /* fin.contenedor vídeo */
@@ -283,8 +283,8 @@ html {
     height: var(--height);
     margin: 0.25rem 0;
     overflow: hidden;
-    mask-image: linear-gradient( to right, transparent, #212529 10% 90%, transparent );
-    font-family: "Poppins", sans-serif;
+    mask-image: linear-gradient(to right, transparent, #212529 10% 90%, transparent);
+    font-family: "Open Sans", sans-serif;
     font-style: normal;
 }
 
@@ -328,7 +328,7 @@ html {
 
 .slider .lista-imagenes-artistas .twitter-artista {
     position: absolute;
-    color: var(--color-rojo);
+    color: var(--color-azulClaro);
     font-size: 1.6rem;
     bottom: 5%;
     left: 20%;
@@ -336,7 +336,7 @@ html {
 
 .slider .lista-imagenes-artistas .facebook-artista {
     position: absolute;
-    color: var(--color-rojo);
+    color: var(--color-azulClaro);
     font-size: 1.6rem;
     bottom: 5%;
     left: 40%;
@@ -344,7 +344,7 @@ html {
 
 .slider .lista-imagenes-artistas .youtube-artista {
     position: absolute;
-    color: var(--color-rojo);
+    color: var(--color-azulClaro);
     font-size: 1.6rem;
     bottom: 5%;
     left: 60%;
@@ -352,7 +352,7 @@ html {
 
 .slider .lista-imagenes-artistas .instagram-artista {
     position: absolute;
-    color: var(--color-rojo);
+    color: var(--color-azulClaro);
     font-size: 1.6rem;
     bottom: 5%;
     left: 80%;
@@ -390,35 +390,42 @@ html {
     filter: grayscale(0);
 }
 /* fin.configuración de los sliders */
+
 /* sección artistas */
 .seccion-artistas {
     padding: 0;
     margin: 0;
 }
+
+.seccion-artistas .contenedor:nth-child(1) {
+    background-color: var(--color-azul);
+}
 /* fin.sección artistas */
+
 /* sección álbumes */
-.seccion-albumes {
-    background-color: var();
-    color: var();
+.seccion-topAlbumes {
+    /*background-color: var(--color-azulOscuro);*/
+    background-color: var(--color-blanco);
+    color: var(--color-azul);
     /*background: linear-gradient(to right, #FF0000 20%, #FFF000 80%);*/
 }
 
+.seccion-topAlbumes .seccion-contenedor {
+    padding: 2rem 0;
+}
+
 .seccion .seccion-titulo {
-    font-family: "Madimi One", sans-serif;
-    font-weight: 300;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
     font-style: normal;
-    font-size: 2rem;
+    font-size: 28px;
 }
 
 .galeria-artistas {
-    font-family: "Madimi One", sans-serif;
-    font-weight: 300;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
     font-style: italic;
-    font-size: 1rem;
-}
-
-.seccion-artistas .contenedor:nth-child(1) {
-    background-color: #e6d900;
+    font-size: 20px;
 }
 
 .oh-snap {
@@ -456,7 +463,7 @@ html {
 }
 
 .card {
-    width: 27rem;
+    width: 20rem;
     height: auto;
     border-radius: 0.35rem;
     -webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
@@ -470,12 +477,20 @@ html {
     align-items: center;
     flex-wrap: nowrap;
     padding: 1rem 0;
-    font-weight: 700;
-    color: var(--color-2-header);
 }
 
 .contenedor-datos h5 {
-    font-weight: 800;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-azulClaro);
+}
+
+.contenedor-datos p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-azul);
 }
 
 .card > img {
@@ -490,7 +505,7 @@ html {
 /* sección contacto */
 .seccion-contacto {
     height: auto;
-    width: 95%;
+    width: 80%;
     margin: 0.75rem auto;
     display: flex;
     flex-direction: row;
