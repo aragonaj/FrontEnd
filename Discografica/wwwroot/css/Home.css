@@ -35,16 +35,16 @@ html {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 700;
-    background-color: var(--color-1-header);
-    color: var(--color-5-header);
+    background-color: var();
+    color: var();
     transition: color 0.5s linear, background-color 0.3s linear;
     cursor: pointer;
 }
 
 .boton:hover {
-    border: 2px solid var(--color-2-header);
+    border: 2px solid var();
     color: var(--color-2-header);
-    background-color: var(--color-5-header);
+    background-color: var();
 }
 
 /****** fuentes ******/
@@ -59,9 +59,11 @@ html {
 :root {
     /* colores */
     --color-blanco: #f1f3f4;
-    --color-negro: #130c0e;
-    --color-verde: #1d953e;
-    --color-rojo: #da103b;
+    --color-azulOscuro: #000814;
+    --color-azul: #003566;
+    --color-azulClaro: #001D3D;
+    --color-amarillo: #FFC300;
+    --color-amarilloClaro: #FFD60A;
 }
 /**** colores.fin ****/
 
@@ -92,18 +94,18 @@ html {
 
 .titulo__link {
     position: relative;
-    color: var(--color-blanco);
     font-family: "Josefin Sans", sans-serif;
     font-size: larger;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 800;
-    transition: color 0.5s ease;
+    color: var(--color-azulClaro) !important;
+    transition: color 1s ease-in-out;
 }
 
 .nav.scrolled .titulo__link {
-    color: var(--color-blanco);
-} 
+    color: var(--color-blanco) !important;
+}
 
 .nav {
     position: fixed;
@@ -116,15 +118,15 @@ html {
     flex-wrap: nowrap;
     align-items: center;
     height: 5rem;
-    background-color: transparent;
     z-index: 1;
-    /*background-color: transparent;*/
-    transition: background-color 0.5s ease;
+    opacity: 75%;
+    background-color: var(--color-blanco);
+    transition: background-color 0.75s ease-in-out;
 }
 
 .nav.scrolled {
-    background-color: var(--color-rojo);
-    opacity: 0.9;
+    background-color: var(--color-azul);
+    opacity: 95%;
 }
 
 .nav .menu {
@@ -157,6 +159,11 @@ html {
     font-style: normal;
     font-size: medium;
     font-weight: 700;
+    color: var(--color-azulClaro);
+    transition: color 1s ease-in-out;
+}
+
+.nav.scrolled .menu__link {
     color: var(--color-blanco);
 }
 
@@ -171,7 +178,7 @@ html {
 .nav .hamIcon .bar {
     width: 30px;
     height: 5px;
-    background-color: var(--color-blanco);
+    background-color: var(--color-azul);
     margin: 5px;
     border-radius: 3px;
     transition: all .3s ease-in-out;
@@ -188,33 +195,46 @@ html {
     align-items: center;
 }
 
-.contenedor-registro > .boton {
-    margin: 0 .5rem;
+.contenedor-registro > .boton-registro {
+    margin: 0 0.5rem;
 }
 
-.boton-login,
-.boton-signup {
+.boton-registro {
     width: 5.5rem;
-    height: 1.75rem;
+    height: 2rem;
     text-align: center;
     border-radius: .35rem;
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: .75rem;
+    font-size: 16px;
     font-weight: 600;
 }
 
 .boton-login {
-    border: #f1f3f4 2px solid;
+    border: var(--color-azul) 2px solid;
     background-color: transparent;
-    color: var(--color-blanco);
+    color: var(--color-azul);
+    transition: color 1s ease-in-out;
 }
 
 .boton-signup {
     border: transparent;
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+    transition: color 1s ease-in-out;
+}
+
+.nav.scrolled .boton-login {
+    border: var(--color-blanco) 2px solid;
+    background-color: transparent;
+    color: var(--color-blanco);
+}
+
+.nav.scrolled .boton-signup {
+    border: transparent;
     background-color: var(--color-blanco);
-    color: var(--color-negro);
+    color: var(--color-azul);
 }
 
 #nav-toggle {
