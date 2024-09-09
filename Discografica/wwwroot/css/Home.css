@@ -418,7 +418,7 @@ html {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 28px;
+    font-size: 26px;
 }
 
 .galeria-artistas {
@@ -458,7 +458,7 @@ html {
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     scroll-behavior: smooth;
-    font-family: "Poppins", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-style: normal;
 }
 
@@ -502,23 +502,17 @@ html {
     object-fit: cover;
 }
 /* fin.sección álbumes */
+
 /* sección contacto */
 .seccion-contacto {
     height: auto;
-    width: 80%;
-    margin: 0.75rem auto;
+    width: 98%;
+    padding: 1rem;
+    margin: 1rem auto;
     display: flex;
     flex-direction: row;
     border-radius: 0.35rem;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-}
-
-.seccion-contacto .titulo-formulario {
-    /*text-align: center;*/
-    font-family: "Madimi One", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 2rem;
 }
 
 .contenedor-formulario {
@@ -526,14 +520,7 @@ html {
     width: 70%;
     height: auto;
     align-content: center;
-    padding: 0rem 3rem;
-}
-
-.formulario-contacto {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding: 1em 2em;
+    padding: 1.5rem;
 }
 
 .contenedor-menu {
@@ -543,38 +530,50 @@ html {
     align-content: center;
 }
 
+.titulo-formulario {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 26px;
+    color: var(--color-azulClaro);
+}
+
 .fieldset {
     width: 90%;
     height: auto;
     display: flex;
     flex-direction: column;
-    margin: 1.5rem auto;
+    margin: 0 auto;
+    border: 0;
+}
+
+.fieldset > * {
+    margin: 0.5rem auto;
 }
 
 .contenedor-email-pais {
     width: 100%;
-    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.contenedor-email-pais .contenedor-email {
+.contenedor-email {
     position: relative;
-    height: 1.5rem;
     width: 50%;
 }
 
-.contenedor-email-pais
 .contenedor-email
 input {
     height: 100%;
-    width: 100%;
+    width: 98%;
     background: none;
     border: none;
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    border-bottom: 2px solid var(--color-1-header);
+    border-bottom: 2px solid var(--color-azulClaro);
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    
 }
 
 .contenedor-email input:focus ~ label,
@@ -582,37 +581,34 @@ input {
     transform: translateY(-1rem);
 }
 
-.contenedor-email-pais
 .contenedor-email
 label {
     position: absolute;
     bottom: 0.5rem;
     left: 0;
-    color: var(--color-3-header);
-    font-family: "Poppins", sans-serif;
+    color: var(--color-azulClaro);
+    font-family: "Josefine Sans", sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
     pointer-events: none;
     transition: all 0.3s ease;
 }
 
-.contenedor-email-pais
-.contenedor-email
 .linea-validacion {
     position: absolute;
     bottom: 0px;
     height: 2px;
-    width: 100%;
-    background-color: var(--color-1-header);
+    width: 98%;
+    background-color: var(--color-azulClaro);
 }
 
-.contenedor-email
 .linea-validacion:before {
     position: absolute;
     content: "";
     height: 100%;
     width: 100%;
-    background: var(--color-6-header);
+    background: var(--color-amarillo);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -622,51 +618,40 @@ label {
     transform: scaleX(1);
 }
 
-.contenedor-email-pais .contenedor-pais {
+.contenedor-pais {
     position: relative;
     width: 50%;
 }
 
-.contenedor-pais > *:nth-child(1) {
-    margin-left: 1.5rem;
+.select-pais {
+    height: 1.5rem;
+    width: 27rem;
+    padding-left: 0.5rem;
+    border: none;
+    border-radius: 0.35rem;
+    appearance: none;
+    color: var(--color-amarillo);
+    background-color: var(--color-azulClaro);
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .contenedor-icono {
     position: absolute;
-    width: 60px;
+    width: 20rem;
     height: 100%;
-    top: 0;
-    right: 0;
+    top: 5px;
+    right: 1rem;
     display: flex;
     justify-content: end;
     align-items: baseline;
-    color: var(--color-5-header);
+    color: var(--color-amarillo);
 }
 
 .contenedor-icono i {
-    font-size: 18px;
-}
-
-.select-pais {
-    border: none;
-    border-radius: 0.35rem;
-    appearance: none;
-    padding: 2px 30px 2px 15px;
-    width: 100%;
-    color: var(--color-5-header);
-    background-color: var(--color-1-header);
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-size: 14px;
-}
-
-.fieldset > * {
-    margin: 1rem auto;
-}
-
-.contenedor-tienda {
-    height: auto;
-    padding: 1em;
+    font-size: 20px;
 }
 
 .contenedor-tienda ul {
@@ -674,21 +659,23 @@ label {
 }
 
 .contenedor-tienda ul li {
-    margin: 1.5rem 0;
+    margin: 0.85rem 0;
 }
 
 .contenedor-tienda ul li a {
     text-decoration: none;
-    font-family: "Poppins", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-size: 16px;
-    color: var(--color-2-header);
+    color: var(--color-azul);
+    transition: all 0.2s ease-in-out;
 }
 
 .contenedor-tienda ul li a:hover {
     font-style: italic;
-    font-weight: 700;
-    color: var(--color-1-header);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--color-azulClaro);
 }
 
 .contenedor-informacion {
@@ -707,12 +694,13 @@ label {
 }
 
 .boton-tienda {
-    margin: 1rem;
+    margin: 0.5rem 0;
 }
 
 .linea {
     width: 100%;
 }
+
 /* fin.sección contacto */
 /* identificadores de los sliders */
 #labelLogo1 {
