@@ -67,7 +67,7 @@ html {
     background-color: transparent;
 }
 
-/****** header ******/
+/* header */
 .contenedor-logo {
     position: relative;
     display: flex;
@@ -119,7 +119,7 @@ html {
     align-items: center;
     height: 5rem;
     z-index: 1;
-    opacity: 80%;
+    opacity: 90%;
     background-color: var(--color-blanco);
     transition: background-color 0.75s ease-in-out;
 }
@@ -300,36 +300,53 @@ html {
     scale: 1 1;
 }
 
-#nav-toggle {
-    position: absolute;
-    top: -100px;
-}
-/* contenedor vídeo */
-.contenedor-video {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* hero */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
-    z-index: -1;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(90deg, rgba(0,53,102,0.9), rgba(255,195,0,0.5));
 }
 
 .video {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-
-.efecto-oscurecer {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+/*.efecto-oscurecer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
     background-color: var(--color-azulOscuro);
     opacity: 50%;
+}*/
+
+.parrafo-header1 {
+    font-family: "Josefine", sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--color-amarillo);
 }
-/* fin.contenedor vídeo */
+
+.parrafo-header2 {
+    font-family: "Open", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-blanco);
+}
+/* fin.hero */
 /*  header.fin */
 /* main */
 /* contenedor secciones */
@@ -763,8 +780,8 @@ label {
 .linea {
     width: 100%;
 }
-
 /* fin.sección contacto */
+
 /* identificadores de los sliders */
 #labelLogo1 {
     animation-delay: 0s;
@@ -846,10 +863,11 @@ label {
     animation-delay: 50s;
 }
 /* identificadores de los sliders.end */
-/**** main.fin ****/
-/****** footer ******/
-.footer {
 
+#nav-toggle {
+    position: absolute;
+    top: -100px;
 }
-/**** footer.fin ****/
+
+/**** main.fin ****/
 
