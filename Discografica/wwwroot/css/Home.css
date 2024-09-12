@@ -75,7 +75,8 @@ html {
     justify-content: center;
     align-items: center;
     width: 20%;
-    padding: 0;
+    height: auto;
+    padding: 1rem;
     margin: 0;
 }
 
@@ -86,8 +87,8 @@ html {
 .logo {
     position: relative;
     display: block;
-    width: 15%;
-    height: 15%;
+    width: 3rem;
+    height: auto;
     margin: 0;
     padding: 0;
 }
@@ -187,6 +188,10 @@ html {
     margin: 5px;
     border-radius: 3px;
     transition: all .3s ease-in-out;
+}
+
+.nav.scrolled .hamIcon .bar {
+    background-color: var(--color-blanco);
 }
 
 .contenedor-registro {
@@ -316,22 +321,13 @@ html {
 
 .video {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
 }
-
-/*.efecto-oscurecer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    background-color: var(--color-azulOscuro);
-    opacity: 50%;
-}*/
 
 .parrafo-header1 {
     font-family: "Josefine", sans-serif;
@@ -484,10 +480,8 @@ html {
 
 /* sección álbumes */
 .seccion-topAlbumes {
-    /*background-color: var(--color-azulOscuro);*/
     background-color: var(--color-blanco);
     color: var(--color-azul);
-    /*background: linear-gradient(to right, #FF0000 20%, #FFF000 80%);*/
 }
 
 .seccion-topAlbumes .seccion-contenedor {
@@ -868,6 +862,92 @@ label {
     position: absolute;
     top: -100px;
 }
-
 /**** main.fin ****/
 
+@media screen and (max-device-width: 1450px) {
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contenedor-logo {
+        margin: 0 0.5rem;
+    }
+
+    .logo {
+        width: 3rem;
+        height: auto;
+    }
+
+    .titulo-sitioWeb {
+        display: none;
+    }
+
+    .nav .menu {
+        float: none;
+        position: fixed;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+        z-index: 2;
+        top: 5rem;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        background-color: var(--color-amarillo);
+        color: var(--color-azul);
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+    }
+
+    .contenedor-registro {
+        display: none;
+    }
+
+    .nav :checked ~ .menu {
+        bottom: 0;
+    }
+
+    .nav .hamIcon {
+        display: block;
+    }
+
+    .nav :checked ~ .hamIcon .bar:nth-child(1) {
+        transform: translateY(10px) rotate(225deg);
+    }
+
+    .nav :checked ~ .hamIcon .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-225deg);
+    }
+
+    .nav :checked ~ .hamIcon .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .seccion-contacto {
+        display: none;
+    }
+}
+
+/* ============ small devices ============ */
+/* For Tablet View */
+@media screen and (min-device-width: 640px) and (max-device-width: 1024px) {
+    
+
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+    html {
+        background-color: black;
+    }
+
+    .hero {
+        display: none;
+    }
+}
+/* ============ small devices .end// ============ */
