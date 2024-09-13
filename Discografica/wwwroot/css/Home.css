@@ -596,13 +596,13 @@ html {
 .contenedor-formulario {
     width: 55rem;
     flex-grow: 1;
-    padding: 1.5rem;
+    padding: 0.5rem 1.5rem;
 }
 
 .contenedor-menu {
     width: 20rem;
     flex-grow: 1;
-    padding: 1.5rem;
+    padding: 0.5rem 1.5rem;
 }
 
 .formulario-contacto {
@@ -653,6 +653,12 @@ html {
     font-style: italic;
     font-size: 16px;
     font-weight: 500;
+}
+
+.contenedor-terminos label {
+    margin: 0 0.30rem;
+    font-family: "Open", sans-serif;
+    font-size: 14px;
 }
 
 .contenedor-tienda {
